@@ -1,2 +1,2 @@
-# comfyui_launcher-docker-compose
+# comfyui-launcher-docker-compose
 Docker Compose Project for ComfyUI Launcher.
