@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  comfyui_launcher:
+    image: thecooltechguy/comfyui_launcher
+    container_name: comfyui_launcher
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./comfyui_launcher_models:/app/server/models
+      - ./comfyui_launcher_projects:/app/server/projects
+    environment:
+      - PROXY_MODE=true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
